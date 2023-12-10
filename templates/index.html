@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/library/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/frontend/main.css">
+    <title>About your self</title>
+</head>
+<body>
+    <section id="wrapper">
+        <div class="container">
+            <form class="card shadow form-container" onsubmit="processInfo(event)">
+                <h3 class="header text-center">Know more about your self</h3>
+                <div class="row">
+                    <div class="col-12 col-lg-6 mb-3">
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name">
+                            <p class="error-text text-danger d-none">name field must not be empty</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 mb-4">
+                        <select name="birth_year" id="birth_year" class="form-select" onchange="showDay()">
+                            <option value="" selected disabled>Year of birth</option>
+                        </select>
+                        <p class="error-text text-danger d-none">please select a birth year</p>
+                    </div>
+                    <div class="col-12 col-lg-6 mb-4">
+                        <select name="birth_month" id="birth_month" class="form-select" onchange="showDay()">
+                            <option value="" selected disabled>Month of birth</option>
+                        </select>
+                        <p class="error-text text-danger d-none">please select a birth month</p>
+                    </div>
+                    <div class="col-12 col-lg-6 mb-4">
+                        <select name="birth_day" id="birth_day" class="form-select">
+                            <option value="" selected disabled>Day of birth</option>
+                        </select>
+                        <p class="error-text text-danger d-none">please select day of birth</p>
+                    </div>
+                    <div class="col-12 col-lg-6 mb-4">
+                        <div class="form-group">
+                            <button type="submit" class="btn">check me up</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="alert d-none" id="display-output"></div>
+                        <div class="alert alert-danger d-none" id="display-error"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <script src="../static/js/frontend/main.js" ></script>
+</body>
+</html>
